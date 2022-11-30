@@ -11,6 +11,9 @@ import TuitsController
 const app = express();
 app.use(cors())
 
+import mongoose from "mongoose";
+mongoose.connect('mongodb://localhost:27017/tuiter');
+
 app.use(express.json());
 TuitsController(app);
 HelloController(app);
